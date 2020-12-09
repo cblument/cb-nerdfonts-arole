@@ -1,0 +1,17 @@
+---
+- name: create font directory
+  file:
+    path: /usr/local/share/fonts/{{ item }}
+    state: directory
+  become: yes
+  loop:
+    - Hack
+
+- name: install
+  unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+    dest: /usr/local/share/fonts/Hack
+    remote_src: yes
+  become: yes
+  notify:
+    - Rebuild fonts

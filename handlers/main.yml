@@ -1,0 +1,3 @@
+---
+- name: Rebuild fonts
+  shell: fc-cache -fv
