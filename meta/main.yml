@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Chris Blumentritt
+  description: Configures nerdfonts
+
+  license: BSD
+
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: MacOSX
+    versions:
+    - Catalina
+
+  galaxy_tags:
+  - nerdfonts
+
+dependencies: []
