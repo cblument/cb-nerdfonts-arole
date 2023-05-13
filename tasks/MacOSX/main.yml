@@ -1,10 +1,12 @@
 ---
 - name: Add brew tap
-  homebrew_tap:
+  community.general.homebrew_tap:
     name: homebrew/cask-fonts
+  become: no
 
 - name: Install fonts
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ item }}"
+  become: no
   loop:
     - font-hack-nerd-font
